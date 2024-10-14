@@ -44,7 +44,7 @@ public class TodoDAOTests {
     @Test
     public void testSelectOne() throws Exception {
 
-        TodoVO vo = todoDAO.selectOne(1L);
+        TodoVO vo = todoDAO.selectOne(2L);
 
         System.out.println(vo);
 

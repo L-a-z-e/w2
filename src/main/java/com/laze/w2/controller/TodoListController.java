@@ -3,6 +3,8 @@ package com.laze.w2.controller;
 import com.laze.w2.dto.TodoDTO;
 import com.laze.w2.service.TodoService;
 import lombok.extern.log4j.Log4j2;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,6 +23,10 @@ public class TodoListController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         log.info("todo list...");
+
+//        ServletContext servletContext = req.getServletContext();
+//
+//        log.info("appName : " + servletContext.getAttribute("appName"));
 
         try {
             List<TodoDTO> dtoList = todoService.listAll();
